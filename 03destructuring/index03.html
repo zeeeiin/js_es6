@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let list = [
+                    {
+                        "num" : 1,
+                        "title" : "hello",
+                        "info": ["banana", "apple"], 
+                        "profile" : {"birth": "20201111", "img": "https://wwww.test.com/1"}
+                    },
+                    {
+                        "num" : 1,
+                        "title" : "hello",
+                        "info": ["melon", "orange"], 
+                        "profile" : {"birth": "20201212", "img": "https://wwww.test.com/2"}
+                    }
+                ];
+
+
+        //두번째 객체의 title의 값
+        //console.log( list[1]['title']); //기존 방법
+        
+        // const [ , a] = list;
+        // const {title} = a; //a를 구조분해할당하게 되면
+
+        //구조분해할당
+        //첫번째로 구조분해할 대상은? 배열이기 때문에 대괄호
+
+        //const [ ,{title}] = list; //좌측에서 값 가지고 나오기
+        //console.log(title); //hello
+        //여기서의 a는? -> 두번째 객체
+
+        //두 번째 객체의 num, title, info
+        //const [ , {num, title, info}] = list;
+
+        //이름 바꿔 가져오기
+        // const [ , {num : a, title : b, info : c}] = list;
+        // console.log( a, b, c );
+
+
+        //두 번째 객체의 info의 첫번째 요소만 갖고 나오겠다
+        //const [, {info : [a]}] = list; //{info}는 배열[] 이 안에서 첫번째 요소를 갖고 나와야한다.
+        //console.log(a, b);
+
+
+        //첫 번째 객체의 profile안에 있는 birth와 img값 구조분해할당
+        const [ {profile : { birth :a, img:b} } ] = list; 
+        console.log(a, b);
+        // console.log(a);
+        // console.log(b);
+        
+        console.log(list);
+
+        const [ {profile : { birth, img} } ] = list; 
+        console.log(birth);
+        console.log(img);
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

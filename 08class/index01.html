@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //일반 HTML에서는 굳이 클래스를 생성할 필요는 없다.
+        //멤버변수 지칭할 때 키워드를 사용하지 않는다.
+        class Person {
+
+            //멤버변수
+            a = 'hong';
+            b = 10;
+            c = {};
+
+            //생성자 - constructor로 반드시 통일, 1개만 선언이 가능하다.
+            constructor(b) {
+                this.b = b; //b 초기화
+            }
+
+            //함수 - 키워드 없이 바로 함수가 된다.
+            function  = () => {
+                console.log('함수 1번');
+            }
+
+            //선언적 함수
+            func2() {
+                console.log(this.a, this.b, this.c);
+            }
+
+        }
+
+        //객체 생성1
+        let p = new Person();
+        console.log(p.a);
+        console.log(p.b);
+        console.log(p.c);
+        p.func();
+        p.func2();
+        
+
+        //객체 생성2
+        let p2 = new Person(30); //매개변수 하나 지정하고 생성자에 맞추기
+
+
+    </script>
+
+
+
+</body>
+</html>

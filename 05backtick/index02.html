@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="time"></div>
+
+
+
+    <script>
+
+        setInterval(() => {
+
+            let date = new Date();
+    
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let second = date.getSeconds();
+
+            document.querySelector(".time").innerHTML = `${hour < 10 ? '0'+ hour : hour} :
+                                                         ${min < 10 ? '0'+ min : min} : 
+                                                         ${second < 10 ? '0'+  second : second} `;
+
+        }, 1000); //1초마다 실행되는 인터벌
+
+        //let time = document.querySelector(".time");          
+        // console.log( `${hour < 10 ? hour : `0${hour}` }`);
+        // console.log(`${min < 10 ? min : `0${min}`}`);
+
+
+    </script>
+    
+</body>
+</html>

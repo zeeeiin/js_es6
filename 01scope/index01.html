@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        var a = 10;
+        var a = '10';
+        console.log(a); //마지막에 입력한 '10'이 출력됨. 변수의 중복이 가능했다.
+
+        if(true) {
+            var a = true;
+        }
+        console.log(a); //출력해보면 값은 true;
+        */
+
+        
+        let a = 10;
+        //let a = '10'; //중복x
+
+
+        //변수의 유효범위가 중괄호가 되었다.
+        if(true) {
+            let a = true; 
+            console.log(a); //true
+        }
+
+        console.log(a); //10
+
+        console.log('-----------------------------------------------'); 
+
+
+        //const gender; //초기값이 지정되지 않아서 빨간 줄이 뜨는 것.
+        //상수는 초기화되면 값을 바꿀 수 없어서 꼭 초기화가 되어야한다.
+
+        //상수의 선언 - 변경 불가능
+        const gender = '남자'; 
+        //gender = '여자'; //변경 불가능
+
+
+        const arr = [1,2,3];
+        arr[0] = '홍길동'; //내부요소 변경은 가능함
+        arr[1] = '이순신';
+        
+        arr.push('홍길자');
+
+        console.log(arr);
+
+        const person = {name : '홍길동'};
+        //person = ''; //불가능
+
+        //객체 안의 값은 변경 가능
+        person.name = '이순신'; //내부요소 변경은 가능함
+        person.age = 20;
+        console.log(person);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

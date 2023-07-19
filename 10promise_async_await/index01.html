@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //1. promise객체란? => ex6 내장객체
+    let promise = new Promise(function( success, fail ) { //promise객체 생성하고 변수에 저장하고 객체반환
+      //success, fail은 반드시 콜백이 들어올 것이다.
+      //비동기적으로 먼저 콜백을 하고,
+
+      setTimeout( () => {
+        //프로미스 입장에서 성공을 알린느 함수        
+        //success('성공했다!');
+
+        //프로미스 입장에서 실패를 알리는 함수
+        fail(new Error('에러남'));
+        
+      }, 5000)
+
+    });
+
+    console.log(promise);
+
+
+    //then절은 성공을 돌려받는 콜백함수를 정의한다.
+    //catch절은 에러를 돌려받을 콜백함수를 정의한다.
+
+    promise
+    .then( (data) => {
+      console.log(data);
+    }).catch( (err) => {
+      console.log(err);
+    })
+
+    // function success(a) {
+    //   console.log(a);
+    // }
+
+    // function fail() {
+
+    // }
+
+
+  </script>
+
+</body>
+</html>

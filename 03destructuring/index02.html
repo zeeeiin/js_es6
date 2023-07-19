@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let obj = {name: "이순신", age: 20};
+
+        /*  기존문법
+        console.log( obj.name );
+        console.log( obj['name']);
+        */
+
+        //구조분해할당
+        let {name, age} = obj;
+        console.log(name);
+        console.log(age);
+
+        //전부 다 구조분해할당
+        let {...x} = obj; //객체 안의 요소들을 다 펼쳐서 가져오겠다
+        console.log(x);
+
+        console.log('--------------------------------------');
+
+        //이름바꿔 가져오기
+        let person = {
+            name : "홍길자",
+            age : 20,
+            job : [1,2,3,4,5]
+        }
+
+        //name이라는 키를 n변수로 가지고 나옴.
+        let {name : n} = person;
+        console.log(n); //홍길자
+
+        let {name: n1, age : a1, job : arr } = person; //사용할 수 있는 변수는 n1, a1, arr
+        console.log(n1, a1, arr);
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        a(); //함수호출
+
+        var a = function() { //일반 익명함수..
+            console.log('a실행');
+        }
+        */
+
+
+        let a = () => {
+            console.log('a실행');
+        }
+
+        a(); 
+
+
+        //문법1 - 작성할 코드가 한줄이면 {}는 생략할 수 있다.
+        //        {}를 쓰지 않으면 기본값 undefined가 반환된다. 
+        //        작성한 한줄짜리 코드가 자동으로 리턴구문에 들어가게 된다.
+        //        {}를 쓰지 않고, 구문을 작성하면 자동으로 리턴값이 된다.
+
+        // let b = (x) => {
+        //     console.log(x);
+        // }
+
+        let b = (x) =>  console.log(x);
+        console.log ( b(10) ); //undefined
+
+        let c = (x) => x + 10; //return x + 10;
+        console.log( c(10) ); //20
+
+
+        ////////////////////////////////////////////////////////////////////
+
+        //문법2 - 매개변수가 1개라면 ()를 생략할 수 있다.
+        //let d = (x) => x* 10; 
+        let d = x => x* 10; //매개변수가 하나라면 소괄호 생략 가능!
+        console.log( d(3) ); //30
+
+        let e = (x = 10, y = 20) => x * y; //default 매개변수 //매개변수 2개, x와 y를 곱해서 리턴한다.
+
+        ////////////////////////////////////////////////////////////////////
+
+        //문법3 - 객체를 반환할 때는 ()로 묶어준다.
+        
+        // let f = () => {
+        //     return {name:'홍길동'};
+        // }
+        
+        let f = () => ({name:'홍길동'}); //객체 리턴
+                
+        console.log( f() );
+
+        
+
+
+
+
+    </script>
+
+
+</body>
+</html>

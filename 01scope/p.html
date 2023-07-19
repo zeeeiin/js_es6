@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      let arr = ['a', 'b', 'c'];
+       
+      for(var i in arr ) {
+          console.log(i); //0, 1, 2 
+      }
+
+      for(let i in arr ) {
+            console.log(i);  //0, 1, 2 
+      }
+
+      let person = {name:'홍길동', age : 20};
+
+      for(let i in person ) {
+        console.log(i);  //name, age
+      }
+      console.log('--------------------------------------');
+      const list = [{name: "홍길동", age: 10},
+                      {name: "이순신", age: 20}
+                    ];
+
+       for( let {name, age} of list) {
+            console.log(name);
+            console.log(age);
+        }
+
+
+
+        let name = '홍길동';
+        let age = 20;
+
+
+        console.log(`${name}, ${age}`);
+        console.log(name, age);
+
+        let num = parseInt(Math.random() * 20); 
+        console.log(`이번에 나온 랜덤수는 ${num}`);
+
+        console.log(`이번에 나온 랜덤수는 ${num >= 10 ? num : '0'+ num}`);
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

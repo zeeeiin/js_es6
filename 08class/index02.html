@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        class Shape {
+
+            constructor() {}
+
+            getShape () {}
+
+
+        }
+
+        //클래스 상속
+        class Rect extends Shape {
+            
+            constructor(w, h) {
+                super(); //반드시 부모 생성자와 연결해줘야한다.
+                this.w = w; //왼쪽이 멤버변수. 멤버변수를 직접 적지 않더라도 이렇게 적으면 자동생성된다.
+                this.h = h; //this 키워드 사용시 멤버변수 자동 생성
+            }
+
+
+            //getter
+            getW() {
+                return this.w;
+            }
+
+            //setter
+            setW(w) {
+                this.w = w;
+            }
+
+        } //이렇게 만들고 객체 생성하기
+
+        let rect = new Rect(10, 20); //w, h
+        rect.getShape(); //상속받음
+        rect.getW(); //내꺼
+        rect.setW(10); //내꺼
+
+        console.log(rect.w);
+        console.log(rect.h);
+
+
+    </script>
+
+
+
+
+</body>
+</html>
